@@ -31,6 +31,7 @@
 		A2AE65AE18231CB9001D8DC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65AD18231CB9001D8DC1 /* Security.framework */; };
 		A2AE65B018231CBF001D8DC1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65AF18231CBF001D8DC1 /* StoreKit.framework */; };
 		A2AE65B218231CCC001D8DC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65B118231CCC001D8DC1 /* SystemConfiguration.framework */; };
+		A2AE65B418231D72001D8DC1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A2AE65AD18231CB9001D8DC1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A2AE65AF18231CBF001D8DC1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A2AE65B118231CCC001D8DC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = BirthdayApp/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				A2AE656F18231A04001D8DC1 /* UIKit.framework in Frameworks */,
 				A2AE65A018231C33001D8DC1 /* Parse.framework in Frameworks */,
 				A2AE656B18231A04001D8DC1 /* Foundation.framework in Frameworks */,
+				A2AE65B418231D72001D8DC1 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 		A2AE656918231A04001D8DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */,
 				A2AE65B118231CCC001D8DC1 /* SystemConfiguration.framework */,
 				A2AE65AF18231CBF001D8DC1 /* StoreKit.framework */,
 				A2AE65AD18231CB9001D8DC1 /* Security.framework */,
