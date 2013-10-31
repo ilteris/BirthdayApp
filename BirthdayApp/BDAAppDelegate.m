@@ -7,11 +7,20 @@
 //
 
 #import "BDAAppDelegate.h"
+#import <Parse/Parse.h>
+
 
 @implementation BDAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"q0EAVFjmej7grQhxXkxtpWw2xyN2tyIjLlrTfcU1"
+                  clientKey:@"ct52qpelcglPX7m72hmLaN15VReaSoIBJynwTrCM"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
