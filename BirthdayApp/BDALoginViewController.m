@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     [_activityIndicator stopAnimating];
+    [PFUser logOut];
+    
     // Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         BDAListViewController* listViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BDAListViewController"];
