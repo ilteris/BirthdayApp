@@ -10,7 +10,6 @@
 
 @implementation BDADataSource
 
-NSMutableDictionary* _fbFriends;
 NSMutableArray* _birthdayOfFriends;
 
 +(id)sharedInstance {
@@ -26,7 +25,7 @@ NSMutableArray* _birthdayOfFriends;
 }
 
 
-- (id)init {
+-(id)init {
     self =[super init];
     if (self) {
         //initialize Default Data here.
@@ -35,10 +34,15 @@ NSMutableArray* _birthdayOfFriends;
     return self;
 }
 
-- (void)initializeDefaultDataList {
+-(void)initializeDefaultDataList {
     _fbFriends = [[NSMutableDictionary alloc] init];
     _birthdayOfFriends = [[NSMutableArray alloc] init];
     
+}
+
+-(void)reset {
+    [_fbFriends removeAllObjects];
+    [_birthdayOfFriends removeAllObjects];
 }
 
 @end

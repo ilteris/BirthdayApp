@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "BDAListViewController.h"
 #import "BDAConnection.h"
-
+#import "BDADataSource.h"
 @interface BDALoginViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
@@ -24,6 +24,7 @@
     [super viewDidLoad];
     [_activityIndicator stopAnimating];
     [PFUser logOut];
+    
     
     // Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -40,6 +41,8 @@
 /* Login to facebook method */
 - (IBAction)loginButtonTouchHandler:(id)sender
 {
+    [[BDADataSource sharedInstance] reset];
+    
     [_btnLogin setEnabled:NO];
     
     // Show an activity indicator

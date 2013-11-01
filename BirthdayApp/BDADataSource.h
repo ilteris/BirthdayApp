@@ -10,4 +10,10 @@
 
 @interface BDADataSource : NSObject
 
+@property (nonatomic, copy) NSMutableDictionary* fbFriends;
+
+
++ (id)sharedInstance;
+-(void)reset;
+
 @end
