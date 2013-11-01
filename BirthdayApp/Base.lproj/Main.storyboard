@@ -23,6 +23,11 @@
                                 <state key="normal" backgroundImage="Facebook_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="Facebook_icon.png"/>
+                                <state key="highlighted" backgroundImage="Facebook_icon.png"/>
+                                <connections>
+                                    <action selector="loginButtonTouchHandler:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g3F-6Q-dxw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check out your friends' birthdays by logging in to facebook!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-2L-qZr">
                                 <rect key="frame" x="0.0" y="406" width="320" height="112"/>
@@ -52,7 +57,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nxt-9O-M1w">
             <objects>
-                <navigationController definesPresentationContext="YES" id="tlO-YJ-Nk3" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="tlO-YJ-Nk3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="13T-Uu-jDC">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
