@@ -27,6 +27,7 @@
                                 <state key="highlighted" backgroundImage="Facebook_icon.png"/>
                                 <connections>
                                     <action selector="loginButtonTouchHandler:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g3F-6Q-dxw"/>
+                                    <segue destination="123-FW-lhn" kind="push" identifier="BDAListViewController" id="EQ3-s2-a29"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check out your friends' birthdays by logging in to facebook!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-2L-qZr">
@@ -53,6 +54,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="469" y="-611"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="3NG-ja-ruf">
+            <objects>
+                <viewController storyboardIdentifier="BDAListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="123-FW-lhn" customClass="BDAListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBD-nH-bhG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8q1-MP-NMV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgf-7k-fHt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i5N-B8-m4W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEC-fG-xIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="-611"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nxt-9O-M1w">

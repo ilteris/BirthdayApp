@@ -8,6 +8,8 @@
 
 #import "BDALoginViewController.h"
 #import <Parse/Parse.h>
+#import "BDAListViewController.h"
+
 
 @interface BDALoginViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -48,15 +50,30 @@
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
-           
+            BDAListViewController* listViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BDAListViewController"];
+            
+            [[self navigationController] pushViewController:listViewController animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");
-           
+            BDAListViewController* listViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BDAListViewController"];
+            
+            [[self navigationController] pushViewController:listViewController animated:YES];
         }
     }];
     
     [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"BDAListViewController"]) {
+        //prepare any data here.
+        NSLog(@"preparing to launch list controller");
+    }
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning

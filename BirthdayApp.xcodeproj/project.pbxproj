@@ -33,6 +33,7 @@
 		A2AE65B218231CCC001D8DC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65B118231CCC001D8DC1 /* SystemConfiguration.framework */; };
 		A2AE65B418231D72001D8DC1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */; };
 		A2AE65B61823226D001D8DC1 /* Facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */; };
+		A2AE65B9182327F8001D8DC1 /* BDAListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE65B8182327F8001D8DC1 /* BDAListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		A2AE65B118231CCC001D8DC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = BirthdayApp/FacebookSDK.framework; sourceTree = "<group>"; };
 		A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook_icon@2x.png"; sourceTree = "<group>"; };
+		A2AE65B7182327F8001D8DC1 /* BDAListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAListViewController.h; sourceTree = "<group>"; };
+		A2AE65B8182327F8001D8DC1 /* BDAListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDAListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				A2AE657918231A04001D8DC1 /* BDAAppDelegate.h */,
 				A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */,
 				A2AE657C18231A04001D8DC1 /* Main.storyboard */,
+				A2AE65B7182327F8001D8DC1 /* BDAListViewController.h */,
+				A2AE65B8182327F8001D8DC1 /* BDAListViewController.m */,
 				A2AE657F18231A04001D8DC1 /* BDALoginViewController.h */,
 				A2AE658018231A04001D8DC1 /* BDALoginViewController.m */,
 				A2AE658218231A04001D8DC1 /* Images.xcassets */,
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AE65B9182327F8001D8DC1 /* BDAListViewController.m in Sources */,
 				A2AE658118231A04001D8DC1 /* BDALoginViewController.m in Sources */,
 				A2AE657B18231A04001D8DC1 /* BDAAppDelegate.m in Sources */,
 				A2AE657718231A04001D8DC1 /* main.m in Sources */,
