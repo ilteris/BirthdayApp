@@ -49,6 +49,7 @@
                     <navigationItem key="navigationItem" id="qP9-LL-eYu"/>
                     <connections>
                         <outlet property="activityIndicator" destination="LqG-QQ-c5n" id="GLI-Lw-OL8"/>
+                        <outlet property="btnLogin" destination="WCQ-QW-Dxc" id="dUz-Yb-QWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

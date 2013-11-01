@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BDAConnection.h"
 
-@interface BDALoginViewController : UIViewController
+@interface BDALoginViewController : UIViewController <BDAConnectionDelegate>
 
 @end
