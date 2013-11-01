@@ -16,7 +16,8 @@
 +(void) loginFacebook:(id<BDAConnectionDelegate>)delegate;
 {
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    NSArray *permissionsArray = @[@"user_about_me", @"user_relationships", @"friends_hometown",
+                                  @"friends_birthday",@"friends_location", @"user_birthday", @"user_location"];
     
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
 		// Was login successful ?
@@ -39,11 +40,13 @@
 			}
             
 			// Callback - login successful
+            
+            
 			[FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
                     NSDictionary<FBGraphUser> *me = (NSDictionary<FBGraphUser> *)result;
                     // Store the Facebook Id
-                    NSLog(@"me is %@", me);
+                   // NSLog(@"me is %@", me);
                     
                     [[PFUser currentUser] setObject:me.id forKey:@"fbId"];
                     
@@ -53,26 +56,20 @@
 
                     
                     // 1 Build a Facebook Request object to retrieve  friends from Facebook.
-                    FBRequest *friendsRequest = [FBRequest requestForMyFriends];
-                    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
-                                                                  NSDictionary* result,
-                                                                  NSError *error) {
-                        // 2 Loop through the array of FBGraphUser objects data returned from the Facebook request.
-                        NSArray *friends = result[@"data"];
-                        for (NSDictionary<FBGraphUser>* friend in friends) {
-                            NSLog(@"Found a friend: %@", friend.name);
-                            
-                            // Add each friend’s FBGraphUser object to the friends list in the DataStore
+                    
+                    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?fields=name,picture,birthday,location"];
+                    [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary* result, NSError *error) {
+                         NSArray *friends = result[@"data"];
+                        for (FBGraphObject<FBGraphUser> *friend in friends) {
+                            NSLog(@"%@:%@, %@", [friend name],[friend birthday], [friend location]);
                             [[[BDADataSource sharedInstance] fbFriends] setObject:friend forKey:friend.id];
-                        }
-                        
-                        
-                       
+                        }}];
+                    
                         // The success callback to the delegate is now only called once the friends request has been made.
                         if ([delegate respondsToSelector:@selector(facebookDidLogin:)]) {
                             [delegate facebookDidLogin:YES];
                         }
-                    }];
+                   
                     
                     
                 }
