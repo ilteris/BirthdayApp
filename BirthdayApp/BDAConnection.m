@@ -42,6 +42,8 @@
                 if (!error) {
                     NSDictionary<FBGraphUser> *me = (NSDictionary<FBGraphUser> *)result;
                     // Store the Facebook Id
+                    NSLog(@"me is %@", me);
+                    
                     [[PFUser currentUser] setObject:me.id forKey:@"fbId"];
                     [[PFUser currentUser] saveInBackground];
                 }
