@@ -37,6 +37,9 @@
             // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
             
+            
+            NSLog(@"userData is %@", userData);
+            
             NSString *facebookID = userData[@"id"];
             
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
