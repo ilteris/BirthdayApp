@@ -14,7 +14,7 @@
 		A2AE657718231A04001D8DC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE657618231A04001D8DC1 /* main.m */; };
 		A2AE657B18231A04001D8DC1 /* BDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */; };
 		A2AE657E18231A04001D8DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE657C18231A04001D8DC1 /* Main.storyboard */; };
-		A2AE658118231A04001D8DC1 /* BDAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE658018231A04001D8DC1 /* BDAViewController.m */; };
+		A2AE658118231A04001D8DC1 /* BDALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE658018231A04001D8DC1 /* BDALoginViewController.m */; };
 		A2AE658318231A04001D8DC1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AE658218231A04001D8DC1 /* Images.xcassets */; };
 		A2AE658A18231A04001D8DC1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE658918231A04001D8DC1 /* XCTest.framework */; };
 		A2AE658B18231A04001D8DC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE656A18231A04001D8DC1 /* Foundation.framework */; };
@@ -57,8 +57,8 @@
 		A2AE657918231A04001D8DC1 /* BDAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDAAppDelegate.h; sourceTree = "<group>"; };
 		A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDAAppDelegate.m; sourceTree = "<group>"; };
 		A2AE657D18231A04001D8DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A2AE657F18231A04001D8DC1 /* BDAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDAViewController.h; sourceTree = "<group>"; };
-		A2AE658018231A04001D8DC1 /* BDAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDAViewController.m; sourceTree = "<group>"; };
+		A2AE657F18231A04001D8DC1 /* BDALoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDALoginViewController.h; sourceTree = "<group>"; };
+		A2AE658018231A04001D8DC1 /* BDALoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDALoginViewController.m; sourceTree = "<group>"; };
 		A2AE658218231A04001D8DC1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2AE658818231A04001D8DC1 /* BirthdayAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthdayAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AE658918231A04001D8DC1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -162,8 +162,8 @@
 				A2AE657918231A04001D8DC1 /* BDAAppDelegate.h */,
 				A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */,
 				A2AE657C18231A04001D8DC1 /* Main.storyboard */,
-				A2AE657F18231A04001D8DC1 /* BDAViewController.h */,
-				A2AE658018231A04001D8DC1 /* BDAViewController.m */,
+				A2AE657F18231A04001D8DC1 /* BDALoginViewController.h */,
+				A2AE658018231A04001D8DC1 /* BDALoginViewController.m */,
 				A2AE658218231A04001D8DC1 /* Images.xcassets */,
 				A2AE657118231A04001D8DC1 /* Supporting Files */,
 			);
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AE658118231A04001D8DC1 /* BDAViewController.m in Sources */,
+				A2AE658118231A04001D8DC1 /* BDALoginViewController.m in Sources */,
 				A2AE657B18231A04001D8DC1 /* BDAAppDelegate.m in Sources */,
 				A2AE657718231A04001D8DC1 /* main.m in Sources */,
 			);

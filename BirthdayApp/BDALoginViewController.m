@@ -6,14 +6,15 @@
 //  Copyright (c) 2013 ilteris. All rights reserved.
 //
 
-#import "BDAViewController.h"
+#import "BDALoginViewController.h"
 #import <Parse/Parse.h>
 
-@interface BDAViewController ()
+@interface BDALoginViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
-@implementation BDAViewController
+@implementation BDALoginViewController
 
 - (void)viewDidLoad
 {
@@ -45,10 +46,10 @@
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+           
         } else {
             NSLog(@"User with facebook logged in!");
-            [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+           
         }
     }];
     

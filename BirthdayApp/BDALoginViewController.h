@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDAViewController : UIViewController
+@interface BDALoginViewController : UIViewController
 
 @end
