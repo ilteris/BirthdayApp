@@ -46,6 +46,8 @@
             
             NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:7];
             
+            
+            
             if (facebookID) {
                 userProfile[@"facebookId"] = facebookID;
             }
@@ -74,8 +76,12 @@
                 userProfile[@"pictureURL"] = [pictureURL absoluteString];
             }
             
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
-            [[PFUser currentUser] saveInBackground];
+            NSLog(@"userProfile is %@", userProfile);
+            
+            [PFObject objectWithClassName:@"User" dictionary:userProfile];
+            
+            //[[PFUser currentUser] setObject:userProfile forKey:@"User"];
+           // [PFOb saveInBackground];
             
             
         } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]

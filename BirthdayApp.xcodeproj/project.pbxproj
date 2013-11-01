@@ -34,6 +34,7 @@
 		A2AE65B418231D72001D8DC1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE65B318231D72001D8DC1 /* FacebookSDK.framework */; };
 		A2AE65B61823226D001D8DC1 /* Facebook_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */; };
 		A2AE65B9182327F8001D8DC1 /* BDAListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE65B8182327F8001D8DC1 /* BDAListViewController.m */; };
+		A2AE65BC18233A68001D8DC1 /* BDAConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE65BB18233A68001D8DC1 /* BDAConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook_icon@2x.png"; sourceTree = "<group>"; };
 		A2AE65B7182327F8001D8DC1 /* BDAListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAListViewController.h; sourceTree = "<group>"; };
 		A2AE65B8182327F8001D8DC1 /* BDAListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDAListViewController.m; sourceTree = "<group>"; };
+		A2AE65BA18233A68001D8DC1 /* BDAConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAConnection.h; sourceTree = "<group>"; };
+		A2AE65BB18233A68001D8DC1 /* BDAConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDAConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 		A2AE657018231A04001D8DC1 /* BirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE65BA18233A68001D8DC1 /* BDAConnection.h */,
+				A2AE65BB18233A68001D8DC1 /* BDAConnection.m */,
 				A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */,
 				A2AE657918231A04001D8DC1 /* BDAAppDelegate.h */,
 				A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */,
@@ -303,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AE65BC18233A68001D8DC1 /* BDAConnection.m in Sources */,
 				A2AE65B9182327F8001D8DC1 /* BDAListViewController.m in Sources */,
 				A2AE658118231A04001D8DC1 /* BDALoginViewController.m in Sources */,
 				A2AE657B18231A04001D8DC1 /* BDAAppDelegate.m in Sources */,
