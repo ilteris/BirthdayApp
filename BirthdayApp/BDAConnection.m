@@ -61,7 +61,7 @@
                     [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary* result, NSError *error) {
                          NSArray *friends = result[@"data"];
                         for (FBGraphObject<FBGraphUser> *friend in friends) {
-                            NSLog(@"%@:%@, %@", [friend name],[friend birthday], [friend location]);
+                            NSLog(@"%@:%@, %@", friend,[friend birthday], [friend location]);
                             [[[BDADataSource sharedInstance] fbFriends] setObject:friend forKey:friend.id];
                         }}];
                     
@@ -69,9 +69,6 @@
                         if ([delegate respondsToSelector:@selector(facebookDidLogin:)]) {
                             [delegate facebookDidLogin:YES];
                         }
-                   
-                    
-                    
                 }
                 
                 
