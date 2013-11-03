@@ -7,7 +7,6 @@
 //
 
 #import "BDAListViewController.h"
-#import <Parse/Parse.h>
 
 @interface BDAListViewController ()
 

@@ -7,7 +7,6 @@
 //
 
 #import "BDAAppDelegate.h"
-#import <Parse/Parse.h>
 
 
 @implementation BDAAppDelegate

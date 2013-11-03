@@ -7,7 +7,6 @@
 //
 
 #import "BDAConnection.h"
-#import <Parse/Parse.h>
 #import "BDADataSource.h"
 
 @implementation BDAConnection
@@ -47,7 +46,6 @@
                     NSDictionary<FBGraphUser> *me = (NSDictionary<FBGraphUser> *)result;
                     // Store the Facebook Id
                    // NSLog(@"me is %@", me);
-                    
                     
                     
                     [[PFUser currentUser] setObject:me.id forKey:@"fbId"];
