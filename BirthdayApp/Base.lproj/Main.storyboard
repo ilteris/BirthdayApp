@@ -27,7 +27,6 @@
                                 <state key="highlighted" backgroundImage="Facebook_icon.png"/>
                                 <connections>
                                     <action selector="loginButtonTouchHandler:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g3F-6Q-dxw"/>
-                                    <segue destination="123-FW-lhn" kind="push" identifier="BDAListViewController" id="EQ3-s2-a29"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check out your friends' birthdays by logging in to facebook!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-2L-qZr">

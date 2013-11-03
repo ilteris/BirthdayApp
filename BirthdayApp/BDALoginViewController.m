@@ -52,15 +52,24 @@
 }
 
 
+-(void)parseUploadComplete:(BOOL)success
+{
+    NSLog(@"parse upload is complete");
+}
+
 -(void)facebookDidLogin:(BOOL)success
 {
     [_activityIndicator stopAnimating];
 
     if(success)
     {
-        BDAListViewController* listViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BDAListViewController"];
         
-        [[self navigationController] pushViewController:listViewController animated:YES];
+        [_btnLogin setEnabled:YES];
+
+        BDAListViewController* listViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BDAListViewController"];
+        [BDAConnection uploadUsersWithBirthdaysToParse:self];
+        
+       // [[self navigationController] pushViewController:listViewController animated:YES];
     }
     else
     {
@@ -73,6 +82,7 @@
     }
 }
 
+/*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"BDAListViewController"]) {
@@ -81,7 +91,7 @@
     }
     
 }
-
+*/
 
 
 - (void)didReceiveMemoryWarning

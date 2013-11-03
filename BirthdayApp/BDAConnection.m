@@ -42,18 +42,9 @@
             if ([delegate respondsToSelector:@selector(facebookDidLogin:)]) {
                 [delegate facebookDidLogin:YES];
             }
-            
-			
-		}
-	}];
-    
-}
+            [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if (!error) {
 
-
-+(void) uploadUsersWithBirthdaysToParse:(id<BDAConnectionDelegate>)delegate
-{
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error) {
             NSDictionary<FBGraphUser> *me = (NSDictionary<FBGraphUser> *)result;
             // Store the Facebook Id
             // NSLog(@"me is %@", me);
@@ -65,30 +56,48 @@
             
             [[[BDADataSource sharedInstance] fbFriends] setObject:me forKey:me.id];
             
+                }}];
             
+		}
+	}];
+    
+}
+
+
++(void) uploadUsersWithBirthdaysToParse:(id<BDAConnectionDelegate>)delegate
+{
+    
             // 1 Build a Facebook Request object to retrieve  friends from Facebook.
             
             FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?fields=name,picture,birthday,location"];
             [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary* result, NSError *error) {
                 NSArray *friends = result[@"data"];
-                for (FBGraphObject<FBGraphUser> *friend in friends) {
-                    NSLog(@"%@:%@, %@", friend,[friend birthday], [friend location]);
-                    [[[BDADataSource sharedInstance] fbFriends] setObject:friend forKey:friend.id];
+                for (FBGraphObject<FBGraphUser> *aFriend in friends) {
+                    NSLog(@"%@, %@", [aFriend birthday], [aFriend location]);
+                    [[[BDADataSource sharedInstance] fbFriends] setObject:aFriend forKey:aFriend.id];
+                   
+                    PFObject *friend = [PFObject objectWithClassName:@"Friend"];
+                    friend[@"userFBId"] = [[PFUser currentUser] objectForKey:@"fbId"];
+                    friend[@"birthday"] = aFriend.birthday;
+                    friend[@"name"] = aFriend.name;
+                    [friend saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        // 5
+                        if(succeeded)
+                        {
+                            if ([delegate respondsToSelector:@selector(parseUploadComplete:)]) {
+                                [delegate parseUploadComplete:YES];
+                            }
+                        }
+                        else
+                        {
+                            NSLog(@"error is %@", error);
+ 
+                        }
+                        
+                       
+                    }];
+                    
                 }}];
-            
-            // The success callback to the delegate is now only called once the friends request has been made.
-            // Callback - login successful
-            if ([delegate respondsToSelector:@selector(facebookDidLogin:)]) {
-                [delegate parseUploadComplete:YES];
-            }
-            
-        }
-        
-        // Callback - login successful
-        if ([delegate respondsToSelector:@selector(facebookDidLogin:)]) {
-            [delegate parseUploadComplete:NO];
-        }
-        
-    }];
 }
+
 @end
