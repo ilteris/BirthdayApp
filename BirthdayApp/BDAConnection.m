@@ -48,6 +48,8 @@
                     // Store the Facebook Id
                    // NSLog(@"me is %@", me);
                     
+                    
+                    
                     [[PFUser currentUser] setObject:me.id forKey:@"fbId"];
                     
                     [[PFUser currentUser] saveInBackground];
