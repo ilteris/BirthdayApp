@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A296FDE81826FEB6005A104B /* BDABirthdayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A296FDE71826FEB6005A104B /* BDABirthdayModel.m */; };
+		A245EC58182701B800A133B8 /* BDABirthdayUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A245EC57182701B800A133B8 /* BDABirthdayUser.m */; };
 		A2AE656B18231A04001D8DC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE656A18231A04001D8DC1 /* Foundation.framework */; };
 		A2AE656D18231A04001D8DC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE656C18231A04001D8DC1 /* CoreGraphics.framework */; };
 		A2AE656F18231A04001D8DC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE656E18231A04001D8DC1 /* UIKit.framework */; };
@@ -50,8 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A296FDE61826FEB6005A104B /* BDABirthdayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDABirthdayModel.h; sourceTree = "<group>"; };
-		A296FDE71826FEB6005A104B /* BDABirthdayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDABirthdayModel.m; sourceTree = "<group>"; };
+		A245EC56182701B800A133B8 /* BDABirthdayUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDABirthdayUser.h; sourceTree = "<group>"; };
+		A245EC57182701B800A133B8 /* BDABirthdayUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDABirthdayUser.m; sourceTree = "<group>"; };
 		A2AE656718231A04001D8DC1 /* BirthdayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AE656A18231A04001D8DC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2AE656C18231A04001D8DC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,12 +170,12 @@
 		A2AE657018231A04001D8DC1 /* BirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
+				A245EC56182701B800A133B8 /* BDABirthdayUser.h */,
+				A245EC57182701B800A133B8 /* BDABirthdayUser.m */,
 				A2AE65BD18234694001D8DC1 /* BDADataSource.h */,
 				A2AE65BE18234694001D8DC1 /* BDADataSource.m */,
 				A2AE65BA18233A68001D8DC1 /* BDAConnection.h */,
 				A2AE65BB18233A68001D8DC1 /* BDAConnection.m */,
-				A296FDE61826FEB6005A104B /* BDABirthdayModel.h */,
-				A296FDE71826FEB6005A104B /* BDABirthdayModel.m */,
 				A2AE65B51823226D001D8DC1 /* Facebook_icon@2x.png */,
 				A2AE657918231A04001D8DC1 /* BDAAppDelegate.h */,
 				A2AE657A18231A04001D8DC1 /* BDAAppDelegate.m */,
@@ -319,12 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AE65BC18233A68001D8DC1 /* BDAConnection.m in Sources */,
-				A296FDE81826FEB6005A104B /* BDABirthdayModel.m in Sources */,
 				A2AE65B9182327F8001D8DC1 /* BDAListViewController.m in Sources */,
 				A2AE658118231A04001D8DC1 /* BDALoginViewController.m in Sources */,
 				A2AE657B18231A04001D8DC1 /* BDAAppDelegate.m in Sources */,
 				A2AE65BF18234694001D8DC1 /* BDADataSource.m in Sources */,
 				A2AE657718231A04001D8DC1 /* main.m in Sources */,
+				A245EC58182701B800A133B8 /* BDABirthdayUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

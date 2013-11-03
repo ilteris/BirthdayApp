@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 ilteris. All rights reserved.
 //
 
-#import "BDABirthdayModel.h"
+#import "BDABirthdayUser.h"
 
-@implementation BDABirthdayModel
+@implementation BDABirthdayUser
 
 @end
