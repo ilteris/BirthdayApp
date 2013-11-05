@@ -76,7 +76,10 @@
                 
                 for (FBGraphObject<FBGraphUser> *aFriend in friends) {
                     NSLog(@"%@, %@", [aFriend birthday], [aFriend location]);
-                   // [[[BDADataSource sharedInstance] fbFriends] setObject:aFriend forKey:aFriend.id];
+                  
+                    
+                    
+                    // [[[BDADataSource sharedInstance] fbFriends] setObject:aFriend forKey:aFriend.id];
                    /*
                     PFObject *friend = [PFObject objectWithClassName:@"Friend"];
                     friend[@"userFBId"] = [[PFUser currentUser] objectForKey:@"fbId"];
